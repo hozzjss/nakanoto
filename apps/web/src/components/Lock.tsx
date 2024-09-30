@@ -159,20 +159,20 @@ function ContractCallVote() {
           contractName: "napper",
           functionName: "wrap",
           functionArgs: [],
-          postConditionMode: PostConditionMode.Deny,
-          postConditions: [
-            createTokenPC(wmnoTokenId, snapShotWMNOBalance, address),
-            createTokenPC(
-              mnoTokenId,
-              snapShotMNOBalance + snapShotWMNOBalance,
-              address,
-            ),
-            createTokenPC(
-              mnoTokenId,
-              snapShotWMNOBalance,
-              `${deployerAddress}.wrapped-nothing-v8`,
-            ),
-          ].filter((item) => item) as FungiblePostCondition[],
+          postConditionMode: PostConditionMode.Allow,
+          // postConditions: [
+          //   createTokenPC(wmnoTokenId, snapShotWMNOBalance, address),
+          //   createTokenPC(
+          //     mnoTokenId,
+          //     snapShotMNOBalance + snapShotWMNOBalance,
+          //     address,
+          //   ),
+          //   createTokenPC(
+          //     mnoTokenId,
+          //     snapShotWMNOBalance,
+          //     `${deployerAddress}.wrapped-nothing-v8`,
+          //   ),
+          // ].filter((item) => item) as FungiblePostCondition[],
           network,
         },
         providers[provider],
