@@ -236,11 +236,11 @@ function ContractCallVote() {
         >
           Read explainer here
         </a>
-        {isEligibleToWrap ? (
-          <Walleton onClick={(provider) => wrap(provider)}>Wrap all</Walleton>
-        ) : (
-          <p className="text-red-500 text-center">You are not eligible brah</p>
-        )}
+        {/* {isEligibleToWrap ? ( */}
+        <Walleton onClick={(provider) => wrap(provider)}>Wrap all</Walleton>
+        {/* ) : ( */}
+        {/* <p className="text-red-500 text-center">You are not eligible brah</p> */}
+        {/* )} */}
       </div>
     </div>
   )
